@@ -91,6 +91,8 @@ header .container .content .item h3 {
     text-transform: capitalize;
     padding: 5px 10px;
     border-radius: 50px;
+    font-size: 1rem;
+    margin-bottom: 10px;
 }
 
 header .container .content .item .date {
