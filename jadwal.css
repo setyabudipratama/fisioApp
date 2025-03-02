@@ -88,6 +88,7 @@ header .container .content .item {
 header .container .content .item h3 {
     background-color: var(--pantoneBlue);
     color: var(--white);
+    text-transform: capitalize;
     padding: 5px 10px;
     border-radius: 50px;
 }
@@ -111,15 +112,23 @@ header .container .content .item .date .items:last-child {
     border: none;
 }
 
-header .container .content .item .date .tanggal,
-header .container .content .item .date .waktu {
-    color: var(--black);
-    text-transform: capitalize;
+header .container .content .item .date .left {
     text-align: start;
-    font-size: 1rem;
-    cursor: default;
 }
 
-header .container .content .item .date .waktu {
+header .container .content .item .date .right {
     text-align: end;
+}
+
+header .container .content .item .date .left .tanggal,
+header .container .content .item .date .left .waktu,
+header .container .content .item .date .right .kuota,
+header .container .content .item .date .right .value {
+    color: var(--black);
+    cursor: default;
+    font-size: 1rem;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
 }
