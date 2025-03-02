@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
+        integrity="sha512-334uBDwY0iZ2TklV1OtDtBW9vp7jjP7SWRzT7Ehu1fdtPIjTpCwTSFb8HI/YBau9L1/kRBEOALrS229Kry4yFQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.cells.min.js"
+        integrity="sha512-ipaWmngfmwPrgmF/qAMVRKDlzM6KSmQIXTTFuDGltitPFDndMN02da4C6n2PyODzCpPHD0GSBDJjHSuLH+TKnQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="pendaftaran.css">
+</head>
+
+<body>
+    <div id="vanta-bg"></div>
+
+    <header>
+        <button class="back">kembali</button>
+        <div class="container">
+            <div class="items">
+                <div class="title">
+                    <i class="fa-solid fa-1"></i>
+                    <h3>jenis cedera</h3>
+                </div>
+                <form action="">
+                    <input type="text" id="jenis" required>
+                    <label for="jenis">jenis cedera</label>
+                    <input type="text" id="lama" required>
+                    <label for="lama">lama cedera</label>
+                    <input type="text" id="kali" required>
+                    <label for="kali">sudah berapa kali terapi?</label>
+                    <input type="text" id="penyebab" required>
+                    <label for="penyebab">penyebab cedera</label>
+                </form>
+            </div>
+            <div class="items">
+                <div class="title">
+                    <i class="fa-solid fa-2"></i>
+                    <h3>cabang olahraga</h3>
+                </div>
+                <form action="">
+                    <input type="text" id="cabang" required>
+                    <label for="cabang">cabang olaharag</label>
+                    <input type="text" id="status" required>
+                    <label for="status">status olahraga</label>
+                </form>
+            </div>
+            <div class="items">
+                <div class="title">
+                    <i class="fa-solid fa-3"></i>
+                    <h3>data pribadi</h3>
+                </div>
+                <form action="">
+                    <input type="text" id="nama" required>
+                    <label for="nama">nama pasien</label>
+                    <input type="text" id="jk" required>
+                    <label for="jk">jenis kelamin</label>
+                    <input type="text" id="tinggi" required>
+                    <label for="tinggi">tinggi badan</label>
+                    <input type="text" id="berat" required>
+                    <label for="berat">berat badan</label>
+                    <input type="text" id="usia" required>
+                    <label for="usia">usia</label>
+                    <input type="text" id="pekerjaan" required>
+                    <label for="pekerjaan">pekerjaan</label>
+                    <input type="text" id="alamat" required>
+                    <label for="alamat">alamat</label>
+                    <input type="number" id="hp" required>
+                    <label for="hp">no. hp</label>
+                </form>
+            </div>
+            <div class="items">
+                <div class="title">
+                    <i class="fa-solid fa-4"></i>
+                    <h3>lampiran</h3>
+                </div>
+                <form action="">
+                    <input type="file" id="file" required>
+                    <label for="file">hasil rontgen/mri (jika ada)</label>
+                </form>
+            </div>
+            <div class="items">
+                <div class="title">
+                    <i class="fa-solid fa-5"></i>
+                    <h3>informasi</h3>
+                </div>
+                <div class="text">
+                    <h4>informasi pendaftaran</h4>
+                    <p>1. Mohon tunggu proses verifikasi oleh admin MCO Arif.</p>
+                    <p>2. Jika verifikasi berhasil, silakan pilih jadwal yang tersedia.</p>
+                    <p>3. Lakukan pembayaran dengan metode yang telah disediakan.</p>
+                </div>
+                <button class="submit"><span><i class="fa-solid fa-check"></i></span>submit</button>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        VANTA.CELLS({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            color1: 0x6a6a,
+            color2: 0xd1c533,
+            size: 1.30,
+            speed: 0.50
+        })
+        document.querySelector('header .back').addEventListener('click', function () {
+            window.location.href = 'index.html';
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,473 @@
+:root {
+    --ultramariane: #120a8f;
+    --pantoneBlue: #0018a8;
+    --chelsea: #0157ba;
+    --white: #fdfdfd;
+    --black: #101010;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid var(--white); */
+}
+
+#vanta-bg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    /* background-color: var(--white); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav {
+    background-color: var(--ultramariane);
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    padding: 5px 10px;
+    z-index: 1000;
+}
+
+header nav ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header nav ul .profile {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    position: relative;
+    left: 2%;
+    cursor: pointer;
+}
+
+header nav ul .profile img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+header nav ul .profile p {
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    color: var(--white);
+    font-weight: bold;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li .menu {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    position: relative;
+    right: 40px;
+}
+
+header nav ul li .menu .home,
+header nav ul li .menu .bell {
+    position: relative;
+}
+
+header nav ul li .menu i {
+    font-size: 1.5rem;
+}
+
+header nav ul li .menu .home .fa-house,
+header nav ul li .menu .bell .fa-bell {
+    color: var(--white);
+    filter: drop-shadow(5px 5px 5px black);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+header nav ul li .menu .home span {
+    text-transform: capitalize;
+    position: absolute;
+    left: -12px;
+    color: var(--white);
+    background-color: var(--black);
+    padding: 2px 5px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+header nav ul li .menu .bell span {
+    text-transform: capitalize;
+    position: absolute;
+    left: -34px;
+    color: var(--white);
+    background-color: var(--black);
+    padding: 2px 5px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+header nav ul li .menu .home:hover .fa-house+span,
+header nav ul li .menu .bell:hover .fa-bell+span {
+    opacity: 1;
+    transform: translateY(30px);
+}
+
+header .sidebar {
+    position: fixed;
+    top: 15%;
+    left: 2%;
+    width: 300px;
+    min-height: 50%;
+    padding: 20px 10px;
+    background-color: var(--ultramariane);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transform: translateX(-110%);
+    transition: transform 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+header .sidebar.active {
+    transform: translateX(0);
+}
+
+header .sidebar .account {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    position: relative;
+    left: 10px;
+    top: 5px;
+}
+
+header .sidebar .account img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+header .sidebar .account p {
+    color: var(--white);
+    font-size: 1rem;
+    cursor: default;
+}
+
+header .sidebar .setting,
+header .sidebar .general {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+header .sidebar .setting {
+    margin-top: 10px;
+}
+
+header .sidebar .setting h3,
+header .sidebar .general h3 {
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    cursor: default;
+    background-color: var(--white);
+    padding: 5px;
+}
+
+header .sidebar .setting .version,
+header .sidebar .setting .logout,
+header .sidebar .general .tutorial,
+header .sidebar .general .location,
+header .sidebar .general .snk {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+header .sidebar .setting .version h4,
+header .sidebar .setting .logout h4,
+header .sidebar .general .tutorial h4,
+header .sidebar .general .location h4,
+header .sidebar .general .snk h4 {
+    text-transform: capitalize;
+    margin-top: 5px;
+    font-weight: normal;
+    color: var(--white);
+}
+
+header .sidebar .setting .version p,
+header .sidebar .setting .logout p,
+header .sidebar .general .tutorial p,
+header .sidebar .general .location p,
+header .sidebar .general .snk p {
+    font-size: 1.2rem;
+    color: var(--white);
+    filter: drop-shadow(5px 5px 5px black);
+}
+
+header .container {
+    width: 90%;
+    height: 100%;
+    /* background-color: var(--chelsea); */
+    position: relative;
+    top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* slide box */
+header .container .box {
+    width: 70%;
+    height: 25vh;
+    background-color: var(--pantoneBlue);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    top: 5%;
+    padding: 10px;
+    box-shadow: inset -5px -5px 10px var(--black);
+}
+
+header .container .box h2 {
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    cursor: default;
+    width: 200px;
+    text-align: center;
+    font-family: pacifico;
+    font-weight: normal;
+    color: var(--white);
+}
+
+header .container .box .logo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    background-color: black;
+    overflow: hidden;
+}
+
+header .container .box .logo img {
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: screen;
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+/* slide carousel */
+header .container .carousel {
+    width: 70%;
+    height: 30vh;
+    position: relative;
+    top: 5%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+header .container .carousel .carousel-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: all 1s ease-in-out;
+}
+
+header .container .carousel .carousel-inner .items {
+    width: 90%;
+    height: 17vh;
+    background-color: var(--pantoneBlue);
+    display: flex;
+    flex: 0 0 100%;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50px;
+    box-shadow: inset -5px -5px 10px var(--black);
+}
+
+header .container .carousel .carousel-inner .items .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header .container .carousel .carousel-inner .items .left h3,
+header .container .carousel .carousel-inner .items .left span {
+    text-transform: capitalize;
+    color: var(--white);
+    cursor: default;
+}
+
+header .container .carousel .carousel-inner .items i {
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* slide menu */
+header .container .menu {
+    width: 80%;
+    height: 30vh;
+    display: flex;
+    position: relative;
+    top: 5%;
+}
+
+header .container .menu .slide {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+header .container .menu .slide .items {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    position: relative;
+    top: 10%;
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+header .container .menu .slide .items .icon {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background-color: var(--pantoneBlue);
+    box-shadow: inset -5px -5px 10px var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transform: perspective(800px) rotateX(30deg) translateY(0);
+    transition: transform 0.4s ease;
+}
+
+header .container .menu .slide .items .icon::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: transparent;
+    border-bottom: 4px solid cyan;
+    border-radius: inherit;
+    z-index: 0;
+    transform: perspective(800px) rotateX(30deg);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+header .container .menu .slide .items .icon:hover {
+    transform: perspective(800px) rotateX(30deg) translateY(-20px);
+}
+
+header .container .menu .slide .items .icon:hover::before {
+    opacity: 1;
+    transform: perspective(800px) rotateX(30deg) translateY(20px);
+    filter: drop-shadow(0 0 5px cyan) drop-shadow(0 0 7px cyan);
+}
+
+header .container .menu .slide .items i {
+    color: var(--white);
+    font-size: 2rem;
+}
+
+header .container .menu .slide .items span {
+    position: absolute;
+    bottom: -60%;
+    background-color: var(--pantoneBlue);
+    color: var(--white);
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+header .container .menu .slide .items:last-child span {
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px) {
+    header .container .menu .slide {
+        justify-content: flex-start;
+    }
+
+    header .container .box,
+    header .container .carousel,
+    header .container .menu {
+        width: 90%;
+    }
+
+    header .container .items {
+        height: 20vh;
+    }
+
+    header .container .menu .slide {
+        height: 20vh;
+    }
+
+    header .container .menu .slide .items {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 1024px) {
+    header .container .menu .slide {
+        justify-content: flex-start;
+    }
+}

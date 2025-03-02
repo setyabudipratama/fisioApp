@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fisio App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
+        integrity="sha512-334uBDwY0iZ2TklV1OtDtBW9vp7jjP7SWRzT7Ehu1fdtPIjTpCwTSFb8HI/YBau9L1/kRBEOALrS229Kry4yFQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.cells.min.js"
+        integrity="sha512-ipaWmngfmwPrgmF/qAMVRKDlzM6KSmQIXTTFuDGltitPFDndMN02da4C6n2PyODzCpPHD0GSBDJjHSuLH+TKnQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="vanta-bg"></div>
+    <header>
+        <nav>
+            <ul>
+                <div class="profile">
+                    <img src="gambar/Alicia.jpeg" alt="Alicia">
+                    <p>Alicia</p>
+                </div>
+                <li>
+                    <div class="menu">
+                        <div class="home">
+                            <i class="fa-solid fa-house"></i>
+                            <span>home</span>
+                        </div>
+                        <div class="bell">
+                            <i class="fa-solid fa-bell"></i>
+                            <span>notification</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="sidebar">
+            <div class="account">
+                <img src="gambar/Alicia.jpeg" alt="Alicia">
+                <p>alicia.*****@gmail.com</p>
+            </div>
+            <div class="setting">
+                <h3>app settings</h3>
+                <div class="version">
+                    <h4>app version</h4>
+                    <p>2.3.0</p>
+                </div>
+                <div class="logout">
+                    <h4>logout</h4>
+                    <p><i class="fa-solid fa-right-from-bracket"></i></p>
+                </div>
+            </div>
+            <div class="general">
+                <h3>general setting</h3>
+                <div class="tutorial">
+                    <h4>tutorial</h4>
+                    <p><i class="fa-solid fa-book"></i></p>
+                </div>
+                <div class="location">
+                    <h4>location</h4>
+                    <p><i class="fa-solid fa-location-dot"></i></p>
+                </div>
+                <div class="snk">
+                    <h4>syarat dan ketentuan</h4>
+                    <p><i class="fa-solid fa-circle-question"></i></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="box">
+                <h2>mesase cedera olahraga</h2>
+                <div class="logo">
+                    <img src="gambar/M.A.T.A.jpeg" alt="Logo">
+                </div>
+            </div>
+
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="items">
+                        <div class="left">
+                            <h3>antiran jadwal</h3>
+                            <span>21704</span>
+                        </div>
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+                    <div class="items">
+                        <div class="left">
+                            <h3>kuota hari ini</h3>
+                            <span>0</span>
+                        </div>
+                        <i class="fa-regular fa-calendar-plus"></i>
+                    </div>
+                    <div class="items">
+                        <div class="left">
+                            <h3>antiran verifikasi</h3>
+                            <span>2</span>
+                        </div>
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu">
+                <div class="slide">
+                    <div class="items">
+                        <div class="icon">
+                            <i class="fa-solid fa-clipboard"></i>
+                        </div>
+                        <span>pendaftaran</span>
+                    </div>  
+                    <div class="items">
+                        <div class="icon">
+                            <i class="fa-regular fa-square-check"></i>
+                        </div>
+                        <span>status registrasi</span>
+                    </div>
+                    <div class="items">
+                        <div class="icon">
+                            <i class="fa-solid fa-money-bill"></i>
+                        </div>
+                        <span>biaya penanganan</span>
+                    </div>
+                    <div class="items">
+                        <div class="icon">
+                            <i class="fa-solid fa-circle-info"></i>
+                        </div>
+                        <span>informasi jadwal</span>
+                    </div>
+                    <div class="items">
+                        <div class="icon">
+                            <i class="fa-solid fa-clipboard-question"></i>
+                        </div>
+                        <span>faq</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <script src="script.js"></script>
+    <script>
+        VANTA.CELLS({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            color1: 0x6a6a,
+            color2: 0xd1c533,
+            size: 1.30,
+            speed: 0.50
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biaya Penanganan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
+        integrity="sha512-334uBDwY0iZ2TklV1OtDtBW9vp7jjP7SWRzT7Ehu1fdtPIjTpCwTSFb8HI/YBau9L1/kRBEOALrS229Kry4yFQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.cells.min.js"
+        integrity="sha512-ipaWmngfmwPrgmF/qAMVRKDlzM6KSmQIXTTFuDGltitPFDndMN02da4C6n2PyODzCpPHD0GSBDJjHSuLH+TKnQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="biaya.css">
+</head>
+
+<body>
+    <div id="vanta-bg"></div>
+
+    <header>
+        <button class="back">kembali</button>
+        <div class="container">
+            <div class="content">
+                <div class="items">
+                    <h3>cedera piriformis syndrome</h3>
+                    <p>rp 350.000</p>
+                </div>
+                <div class="items">
+                    <h3>cedera pergelangan tangan</h3>
+                    <p>rp 200.000</p>
+                </div>
+                <div class="items">
+                    <h3>cedera siku</h3>
+                    <p>rp 200.000</p>
+                </div>
+                <div class="items">
+                    <h3>cedera lutut</h3>
+                    <p>rp 200.000</p>
+                </div>
+                <div class="items">
+                    <h3>cedera leher</h3>
+                    <p>rp 200.000</p>
+                </div>
+                <div class="items">
+                    <h3>cedera <span>lbp</span></h3>
+                    <p>rp 300.000</p>
+                </div>
+                <div class="items">
+                    <h3>cedera panggul</h3>
+                    <p>rp 250.000</p>
+                </div>
+                <div class="items">
+                    <h3>cedera jari tangan</h3>
+                    <p>rp 200.000</p>
+                </div>
+                <div class="items">
+                    <h3>cedera angkle</h3>
+                    <p>rp 200.000</p>
+                </div>
+                <div class="items">
+                    <h3>cedera punggung</h3>
+                    <p>rp 250.000</p>
+                </div>
+                <div class="items">
+                    <h3>cedera <span>hnp</span></h3>
+                    <p>rp 350.000</p>
+                </div>
+                <div class="items">
+                    <h3>cedera bahu</h3>
+                    <p>rp 250.000</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        VANTA.CELLS({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            color1: 0x6a6a,
+            color2: 0xd1c533,
+            size: 1.30,
+            speed: 0.50
+        })
+        document.querySelector('header .back').addEventListener('click', function () {
+            window.location.href = 'index.html';
+        })
+    </script>
+</body>
+
+</html>
