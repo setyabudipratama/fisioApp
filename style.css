@@ -361,10 +361,15 @@ header .container .menu {
 header .container .menu .slide {
     width: 100%;
     height: 100%;
-    display: flex;
+    /* display: flex;
     align-items: flex-start;
     justify-content: center;
-    overflow-x: auto;
+    overflow-x: auto; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    place-items: center;
+    border: 1px solid var(--chelsea);
+    gap: 3rem 10px;
 }
 
 header .container .menu .slide .item {
@@ -487,7 +492,7 @@ header .container .menu .slide .item:last-child span {
     }
 
     header .container .menu .slide {
-        height: 20vh;
+        grid-template-columns: repeat(auto-fit, minmax(80px, auto));
     }
 
     header .container .menu .slide .item .items {
@@ -496,8 +501,8 @@ header .container .menu .slide .item:last-child span {
     }
 }
 
-@media (min-width: 767px) and (max-width: 1024px) {
+/* @media (min-width: 767px) and (max-width: 1024px) {
     header .container .menu .slide {
         justify-content: flex-start;
     }
-}
+} */
