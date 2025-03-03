@@ -368,7 +368,6 @@ header .container .menu .slide {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, auto));
     place-items: center;
-    border: 1px solid var(--chelsea);
     gap: 3rem 10px;
 }
 
