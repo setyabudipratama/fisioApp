@@ -16,14 +16,14 @@ function nextSlide() {
 
 setInterval(nextSlide, 3000);
 
-document.querySelector('header .container .menu .slide .items:first-child').addEventListener('click', function () {
+document.querySelector('header .container .menu .slide .item:first-child').addEventListener('click', function () {
     window.location.href = 'pendaftaran.html';
 })
 
-document.querySelector('header .container .menu .slide .items:nth-child(3)').addEventListener('click', function () {
+document.querySelector('header .container .menu .slide .item:nth-child(3)').addEventListener('click', function () {
     window.location.href = 'biaya.html';
 })
 
-document.querySelector('header .container .menu .slide .items:nth-child(4)').addEventListener('click', function () {
+document.querySelector('header .container .menu .slide .item:nth-child(4)').addEventListener('click', function () {
     window.location.href = 'jadwal.html';
 })
